@@ -1,0 +1,58 @@
+[package]
+name = "plant-cli"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# CLI Framework - for command-line argument parsing
+clap = { version = "4.5", features = ["derive"] }
+
+# Async Runtime - for asynchronous operations
+tokio = { version = "1.40", features = ["full"] }
+
+# Async trait support
+async-trait = "0.1"
+
+# HTTP Client - for API calls to Plant.ID and OpenRouter
+reqwest = { version = "0.12", features = ["json", "multipart"] }
+
+# Database - SQLite async driver
+sqlx = { version = "0.8", features = ["runtime-tokio-rustls", "sqlite", "chrono", "uuid"] }
+
+# Serialization - for JSON handling
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Authentication - JWT and password hashing
+jsonwebtoken = "9.3"
+argon2 = "0.5"
+
+# Configuration - environment variables
+dotenv = "0.15"
+
+# Error Handling
+thiserror = "1.0"
+anyhow = "1.0"
+
+# Logging
+env_logger = "0.11"
+
+# Base64 encoding for images
+base64 = "0.22"
+
+# UUID generation
+uuid = { version = "1.10", features = ["v4", "serde"] }
+
+# Date/Time handling
+chrono = { version = "0.4", features = ["serde"] }
+
+# Password utilities
+rand = "0.8"
+
+# Terminal UI and styling
+console = "0.15"
+indicatif = "0.17"
+dialoguer = "0.11"
+
+# Directory paths
+dirs = "5.0"
